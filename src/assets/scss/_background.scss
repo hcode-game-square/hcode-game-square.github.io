@@ -1,0 +1,78 @@
+@mixin child($left, $width, $height, $delay: 0s, $duration: 25s) {
+  left: $left;
+  width: $width;
+  height: $height;
+  animation-delay: $delay;
+  animation-duration: $duration;
+}
+
+.area {
+  position: fixed;
+  top: 0;
+  z-index: 0;
+  background-color: #222;
+  width: 100vw;
+  height: 100vh;
+}
+.forms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: -150px;
+    z-index: 1;
+    animation: fundoAnimado 25s linear infinite;
+    &:nth-child(1) {
+      @include child(25%, 80px, 80px);
+    }
+    &:nth-child(2) {
+      @include child(10%, 20px, 20px, 2s, 12s);
+    }
+    &:nth-child(3) {
+      @include child(70%, 60px, 60px, 4s);
+    }
+    &:nth-child(4) {
+      @include child(40%, 20px, 20px, 0s, 18s);
+    }
+    &:nth-child(5) {
+      @include child(65%, 20px, 20px, 0s);
+    }
+    &:nth-child(6) {
+      @include child(75%, 110px, 110px, 3s);
+    }
+    &:nth-child(7) {
+      @include child(35%, 150px, 150px, 7s);
+    }
+    &:nth-child(8) {
+      @include child(50%, 25px, 25px, 15s, 45s);
+    }
+    &:nth-child(9) {
+      @include child(20%, 15px, 15px, 2s, 35s);
+    }
+    &:nth-child(10) {
+      @include child(85%, 150px, 150px, 0s, 11s);
+    }
+  }
+}
+
+@keyframes fundoAnimado {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "game-square",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "typescript": "tsc --watch",
+    "sass": "sass ./src/assets/scss:./src/assets/css --watch",
+    "dev": "concurrently \"yarn typescript\" \"yarn sass\""
+  },
+  "devDependencies": {
+    "sass": "^1.34.0",
+    "typescript": "^4.2.4",
+    "concurrently": "^6.2.0"
+  }
+}

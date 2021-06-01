@@ -1,0 +1,28 @@
+@mixin triangle() {
+  position: absolute;
+  border: 100px solid transparent;
+}
+
+#square {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #000;
+  z-index: 2;
+}
+#top {
+  @include triangle;
+  border-bottom: 100px solid var(--yellow);
+}
+#right {
+  @include triangle;
+  border-left: 100px solid var(--red);
+}
+#bottom {
+  @include triangle;
+  border-top: 100px solid var(--green);
+}
+#left {
+  @include triangle;
+  border-right: 100px solid var(--blue);
+}

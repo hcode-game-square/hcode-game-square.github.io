@@ -1,0 +1,25 @@
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  top: 1vh;
+  z-index: 1;
+  transition: all 0s linear;
+  &.play {
+    top: 70vh;
+  }
+  &.red {
+    background-color: var(--red);
+  }
+  &.green {
+    background-color: var(--green);
+  }
+  &.blue {
+    background-color: var(--blue);
+  }
+  &.yellow {
+    background-color: var(--yellow);
+  }
+}

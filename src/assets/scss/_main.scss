@@ -1,0 +1,30 @@
+:root {
+  --blue: #3498db;
+  --green: #2ecc71;
+  --red: #e74c3c;
+  --yellow: #f1c40f;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+  padding-bottom: 10vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+#logo {
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  z-index: 4;
+}

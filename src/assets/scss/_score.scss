@@ -1,0 +1,23 @@
+#score {
+  position: fixed;
+  left: 1vw;
+  top: 1vw;
+  border: #313131 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ccc;
+  min-width: 100px;
+  min-height: 100px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 64px;
+  z-index: 1;
+  div {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
